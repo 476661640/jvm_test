@@ -19,6 +19,7 @@ public class TestMutex {
                 public void run() {
                     for(int i=0;i<10000;i++){
                         increment1();//没有同步措施的a++；
+                        System.out.println("hello");
                     }
                     try {
                         barrier.await();//等30个线程累加完毕
